@@ -128,7 +128,7 @@ In order to connect your MQTT client to an MQTT broker (for example AWS IoT Core
 The example below is using AWS IoT Core.
    
 <details><summary><b>1. Get the certificate from your board</b></summary>
-- Connect your board via USB directly to your machine
+<p>- Connect your board via USB directly to your machine</p>
 - Install teraterm
 - Connect to the right com port
 - Set the baud rate to 1152000
