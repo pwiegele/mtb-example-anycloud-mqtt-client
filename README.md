@@ -128,14 +128,19 @@ In order to connect your MQTT client to an MQTT broker (for example AWS IoT Core
 The example below is using AWS IoT Core.
    
 <details><summary><b>1. Get the certificate from board</b></summary>
-1. Connect your board via USB directly to your machine
+* Connect your board via USB directly to your machine
    Use the micro USB cable to connection the USB port if your board to your machine.
 
-2. Download and install [Teraterm](https://osdn.net/projects/ttssh2/releases/) 
-<p>- Connect to the right com port</p>
-<p>- Set the baud rate to 1152000</p>
-<p>- Press the reset button on the board</p>
-<p>- Copy and paste the PEM certificate string</p>
+* Download and install [Teraterm](https://osdn.net/projects/ttssh2/releases/) 
+   
+* Start ttermpro.exe and connect to KitProg3 USB-UART (COMxxx)
+   
+* Set the baud rate to 1152000 (Setup -> Serial port ... -> Speed
+   
+* Press the RST microswitch on the board (top layer of the PCB close to the micro USB port)
+   
+* Inspect output in teraterm and copy and paste the PEM certificate string.
+   
 </details>
    
 <details><summary><b>2. Setting up your AWS account</b></summary>
