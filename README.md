@@ -128,6 +128,10 @@ In order to connect your MQTT client to an MQTT broker (for example AWS IoT Core
 The example below is using AWS IoT Core.
    
 <details><summary><b>1. Get the certificate from board</b></summary>
+1. Follow the instructions from the **In command-line interface (CLI)** section to create the application, and import the libraries using the `make getlibs` command.
+
+2. Export the application to a supported IDE using the `make <ide>` command.   
+   
 1. Connect your board via USB directly to your machine
 
 2. Install teraterm 
