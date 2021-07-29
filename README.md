@@ -127,7 +127,7 @@ Various CLI tools include a `-h` option that prints help information to the term
 In order to connect your MQTT client to an MQTT broker (for example AWS IoT Core) you need to follow the 4 steps below.
 The example below is using AWS IoT Core.
    
-<details><summary><b>1. Get the certificate from board</b></summary>
+<details><summary><b>1 Get the certificate from board</b></summary>
 * Use the micro USB cable to connect the USB port if your board to your machine
 
 * Download and install [Teraterm](https://osdn.net/projects/ttssh2/releases/) 
@@ -139,8 +139,8 @@ The example below is using AWS IoT Core.
 * Press the RST microswitch on the board (top layer of the PCB close to the micro USB port)
    
 * Inspect output in teraterm and copy and paste the PEM certificate string (copy text and right click)
-<details><summary><b>Example PEM certificate string</b></summary>
-```
+  <details><summary><b>Example PEM certificate string</b></summary>
+  ```
    -----BEGIN CERTIFICATE-----
 MIIB9jCCAXygAwIBAgIEXgT+DjAKBggqhkjOPQQDAzByMQswCQYDVQQGEwJERTEh
 MB8GA1UECgwYSW5maW5lb24gVGVjaG5vbG9naWVzIEFHMRMwEQYDVQQLDApPUFRJ
@@ -154,12 +154,12 @@ jgxJmTAKBggqhkjOPQQDAwNoADBlAjEA0jVk4QiWEyy1/rKM1hZZOrl97wDDXXpp
 AgCQur1rUvgSp4umX0T4LT3EV1JvvUuCAjA86yrxxKrYft/+eqELm3vo7Pd6Jaf/
 aLqzM0OYE4ys7VEMmlhaiP0pCMY18VObNvo=
 -----END CERTIFICATE-----
-```
-</details>
+  ```
+  </details>
    
 </details>
    
-<details><summary><b>2. Setting up your AWS account</b></summary>
+<details><summary><b>2 Setting up your AWS account</b></summary>
 <p>- Register your certificate if your board</p>
 <p>- Create a policy</p>
 <p>- Attach policy to certificate</p>
@@ -168,7 +168,7 @@ aLqzM0OYE4ys7VEMmlhaiP0pCMY18VObNvo=
 <p>- Copy your endpoint identifier</p>
 </details>
 
-<details><summary><b>3. ModusToolbox(TM)</b></summary>
+<details><summary><b>3 ModusToolbox(TM)</b></summary>
 <p>- Download and install ModusToolbox(TM) here</p>
 <p>- (optional) Add the github repository to ModusToolbox(TM)</p>
 <p>- Create new application (choose your BSP and select Template Application "Secure Element Anycloud MQTT Client Demonstration")</p>
@@ -177,7 +177,7 @@ aLqzM0OYE4ys7VEMmlhaiP0pCMY18VObNvo=
 <p>- Compile and flash to your board</p>
 </details>
 
-<details><summary><b>4. Subscribe to MQTT topic</b></summary>
+<details><summary><b>4 Subscribe to MQTT topic</b></summary>
 - foobar
 </details>
    
