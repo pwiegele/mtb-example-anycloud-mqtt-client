@@ -128,8 +128,7 @@ In order to connect your MQTT client to an MQTT broker (for example AWS IoT Core
 The example below is using AWS IoT Core.
    
 <details><summary><b>1. Get the certificate from board</b></summary>
-* Connect your board via USB directly to your machine
-   Use the micro USB cable to connection the USB port if your board to your machine.
+* Use the micro USB cable to connect the USB port if your board to your machine
 
 * Download and install [Teraterm](https://osdn.net/projects/ttssh2/releases/) 
    
