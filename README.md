@@ -123,8 +123,42 @@ Various CLI tools include a `-h` option that prints help information to the term
 </details>
 
 ## Operation
+   
+In order to connect your MQTT client to an MQTT broker (for example AWS IoT Core) you need to follow the 4 steps below.
+The example below is using AWS IoT Core.
+   
+<details><summary><b>1. Get the certificate from your board</b></summary>
+ * Connect your board via USB directly to your machine
+ * Install teraterm
+ * Connect to the right com port
+ * Set the baud rate to 1152000
+ * Press the reset button on the board
+ * Copy and paste the PEM certificate string
+</details>
+   
+<details><summary><b>2. Setting up your AWS account</b></summary>
+ * Register your certificate if your board
+ * Create a policy
+ * Attach policy to certificate
+ * Create a thing
+ * Attach certificate to the thing you created
+ * Copy your endpoint identifier
+</details>
 
-1. Connect the board to your PC using the provided USB cable through the KitProg3 USB connector.
+<details><summary><b>3. ModusToolbox(TM)</b></summary>
+ * Download and install ModusToolbox(TM) here
+ * (optional) Add the github repository to ModusToolbox(TM)
+ * Create new application (choose your BSP and select Template Application "Secure Element Anycloud MQTT Client Demonstration")
+ * Copy your endpoint string to configs/mqtt_client.h (`MQTT_SNI_HOSTNAME` and `MQTT_BROKER_ADDRESS`)
+ * Change the Wi-Fi credentials to your local settings in *configs/wifi_config.h*
+ * Compile and flash to your board
+</details>
+
+<details><summary><b>4. Subscribe to MQTT topic</b></summary>
+ * foobar
+</details>
+   
+4. Connect the board to your PC using the provided USB cable through the KitProg3 USB connector.
 
 2. Modify the user configuration files in the *configs* directory as follows:
 
