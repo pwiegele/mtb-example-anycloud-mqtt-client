@@ -138,7 +138,22 @@ The example below is using AWS IoT Core.
    
 * Press the RST microswitch on the board (top layer of the PCB close to the micro USB port)
    
-* Inspect output in teraterm and copy and paste the PEM certificate string.
+* Inspect output in teraterm and copy and paste the PEM certificate string (copy text and right click)
+<details><summary><b>Example PEM certificate string</b></summary>
+   -----BEGIN CERTIFICATE-----
+MIIB9jCCAXygAwIBAgIEXgT+DjAKBggqhkjOPQQDAzByMQswCQYDVQQGEwJERTEh
+MB8GA1UECgwYSW5maW5lb24gVGVjaG5vbG9naWVzIEFHMRMwEQYDVQQLDApPUFRJ
+R0EoVE0pMSswKQYDVQQDDCJJbmZpbmVvbiBPUFRJR0EoVE0pIFRydXN0IE0gQ0Eg
+MzAwMB4XDTIwMDkxMDExNDAzNVoXDTQwMDkxMDExNDAzNVowGjEYMBYGA1UEAwwP
+SW5maW5lb25Jb1ROb2RlMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE8xsE3m70
+j4zbkjNT0VWtzlRiOXPMPuC0XhP/eHspdjyvIYiglddS0iUOLd9j5WCTs8/nEnh5
+CXgm8OxtwjGYpaNYMFYwDgYDVR0PAQH/BAQDAgCAMAwGA1UdEwEB/wQCMAAwFQYD
+VR0gBA4wDDAKBggqghQARAEUATAfBgNVHSMEGDAWgBSzg+GsVpQGWa/Yr1cheEV0
+jgxJmTAKBggqhkjOPQQDAwNoADBlAjEA0jVk4QiWEyy1/rKM1hZZOrl97wDDXXpp
+AgCQur1rUvgSp4umX0T4LT3EV1JvvUuCAjA86yrxxKrYft/+eqELm3vo7Pd6Jaf/
+aLqzM0OYE4ys7VEMmlhaiP0pCMY18VObNvo=
+-----END CERTIFICATE-----
+</details>
    
 </details>
    
