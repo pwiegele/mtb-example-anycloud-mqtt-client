@@ -127,31 +127,31 @@ Various CLI tools include a `-h` option that prints help information to the term
 In order to connect your MQTT client to an MQTT broker (for example AWS IoT Core) you need to follow the 4 steps below.
 The example below is using AWS IoT Core.
    
-<details><summary><b>1. Get the certificate from your board</b></summary>
+<details><summary><b>1. Get the certificate from board</b></summary>
 <p>- Connect your board via USB directly to your machine</p>
-- Install teraterm
-- Connect to the right com port
-- Set the baud rate to 1152000
-- Press the reset button on the board
-- Copy and paste the PEM certificate string
+<p>- Install teraterm</p>
+<p>- Connect to the right com port</p>
+<p>- Set the baud rate to 1152000</p>
+<p>- Press the reset button on the board</p>
+<p>- Copy and paste the PEM certificate string</p>
 </details>
    
 <details><summary><b>2. Setting up your AWS account</b></summary>
-- Register your certificate if your board
-- Create a policy
-- Attach policy to certificate
-- Create a thing
-- Attach certificate to the thing you created
-- Copy your endpoint identifier
+<p>- Register your certificate if your board</p>
+<p>- Create a policy</p>
+<p>- Attach policy to certificate</p>
+<p>- Create a thing</p>
+<p>- Attach certificate to the thing you created</p>
+<p>- Copy your endpoint identifier</p>
 </details>
 
 <details><summary><b>3. ModusToolbox(TM)</b></summary>
-- Download and install ModusToolbox(TM) here
-- (optional) Add the github repository to ModusToolbox(TM)
-- Create new application (choose your BSP and select Template Application "Secure Element Anycloud MQTT Client Demonstration")
-- Copy your endpoint string to configs/mqtt_client.h (`MQTT_SNI_HOSTNAME` and `MQTT_BROKER_ADDRESS`)
-- Change the Wi-Fi credentials to your local settings in *configs/wifi_config.h*
-- Compile and flash to your board
+<p>- Download and install ModusToolbox(TM) here</p>
+<p>- (optional) Add the github repository to ModusToolbox(TM)</p>
+<p>- Create new application (choose your BSP and select Template Application "Secure Element Anycloud MQTT Client Demonstration")</p>
+<p>- Copy your endpoint string to configs/mqtt_client.h (`MQTT_SNI_HOSTNAME` and `MQTT_BROKER_ADDRESS`)</p>
+<p>- Change the Wi-Fi credentials to your local settings in *configs/wifi_config.h*</p>
+<p>- Compile and flash to your board</p>
 </details>
 
 <details><summary><b>4. Subscribe to MQTT topic</b></summary>
