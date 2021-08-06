@@ -162,12 +162,12 @@ In order to connect your MQTT client to an MQTT broker (for example AWS IoT Core
 </details>
    
 <details><summary><b>2 Setting up your AWS account</b></summary>
-<p>- Register your certificate if your board</p>
-<p>- Create a policy</p>
-<p>- Attach policy to certificate</p>
-<p>- Create a thing</p>
-<p>- Attach certificate to the thing you created</p>
-<p>- Copy your endpoint identifier</p>
+  * Register your certificate if your board</p>
+  * Create a policy</p>
+  * Attach policy to certificate</p>
+  * Create a thing</p>
+  * Attach certificate to the thing you created</p>
+  * Copy your endpoint identifier</p>
 </details>
 
 <details><summary><b>3 ModusToolbox(TM)</b></summary>
