@@ -122,7 +122,7 @@ Various CLI tools include a `-h` option that prints help information to the term
 
 </details>
 
-## Operation
+## Getting started
    
 In order to connect your MQTT client to an MQTT broker (for example AWS IoT Core) you need to follow the 4 steps below.
    
