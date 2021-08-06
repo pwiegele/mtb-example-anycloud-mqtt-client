@@ -164,26 +164,34 @@ In order to connect your MQTT client to an MQTT broker (for example AWS IoT Core
    
 <details><summary><b>2 Setting up your AWS account</b></summary>
    
-* Register your certificate if your board</p>
-* Create a policy</p>
-* Attach policy to certificate</p>
-* Create a thing</p>
-* Attach certificate to the thing you created</p>
-* Copy your endpoint identifier</p>
+* Logon to you your AWS account
+* Choose AWS Iot Core
+* Register your certificate if your board
+* Create a policy
+* Attach policy to certificate
+* Create a thing
+* Attach certificate to the thing you created
+* Copy your endpoint identifier
 </details>
 
-<details><summary><b>3 ModusToolbox(TM)</b></summary>
+<details><summary><b>3 ModusToolbox&trade;</b></summary>
 
-* Download and install ModusToolbox(TM) here</p>
-* (optional) Add the github repository to ModusToolbox(TM)</p>
-* Create new application (choose your BSP and select Template Application "Secure Element Anycloud MQTT Client Demonstration")</p>
-* Copy your endpoint string to configs/mqtt_client.h (`MQTT_SNI_HOSTNAME` and `MQTT_BROKER_ADDRESS`)</p>
-* Change the Wi-Fi credentials to your local settings in *configs/wifi_config.h*</p>
-* Compile and flash to your board</p>
+* Download and install ModusToolbox&trade; here
+* (optional) Add the github repository to ModusToolbox&trade;
+* Create new application (choose your BSP and select Template Application "Secure Element Anycloud MQTT Client Demonstration")
+* Copy your endpoint string to configs/mqtt_client.h (`MQTT_SNI_HOSTNAME` and `MQTT_BROKER_ADDRESS`)
+* Change the Wi-Fi credentials to your local settings in *configs/wifi_config.h*
+* Make sure you open the Wi-Fi access point (matching the credentials you configured earlier)
+* Compile and flash to your board
 </details>
 
 <details><summary><b>4 Subscribe to MQTT topic</b></summary>
-- foobar
+   
+* Go back to your AWS account
+* Click on item Test on he left
+* Enter the String `ledstatus` and click on subscribe
+* Press the button USR_BTN on the top side of the board (close to the silver module)
+* You should see an incomming message in your AWS account
 </details>
    
 ## Debugging
