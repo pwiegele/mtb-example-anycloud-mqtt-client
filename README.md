@@ -127,6 +127,7 @@ Various CLI tools include a `-h` option that prints help information to the term
 In order to connect your MQTT client to an MQTT broker (for example AWS IoT Core) you need to follow the 4 steps below.
    
 <details><summary><b>1 Get the certificate from board</b></summary>
+   
 * Use the micro USB cable to connect the USB port if your board to your machine
 
 * Download and install [Teraterm](https://osdn.net/projects/ttssh2/releases/) 
@@ -162,21 +163,23 @@ In order to connect your MQTT client to an MQTT broker (for example AWS IoT Core
 </details>
    
 <details><summary><b>2 Setting up your AWS account</b></summary>
-  * Register your certificate if your board</p>
-  * Create a policy</p>
-  * Attach policy to certificate</p>
-  * Create a thing</p>
-  * Attach certificate to the thing you created</p>
-  * Copy your endpoint identifier</p>
+   
+* Register your certificate if your board</p>
+* Create a policy</p>
+* Attach policy to certificate</p>
+* Create a thing</p>
+* Attach certificate to the thing you created</p>
+* Copy your endpoint identifier</p>
 </details>
 
 <details><summary><b>3 ModusToolbox(TM)</b></summary>
-<p>- Download and install ModusToolbox(TM) here</p>
-<p>- (optional) Add the github repository to ModusToolbox(TM)</p>
-<p>- Create new application (choose your BSP and select Template Application "Secure Element Anycloud MQTT Client Demonstration")</p>
-<p>- Copy your endpoint string to configs/mqtt_client.h (`MQTT_SNI_HOSTNAME` and `MQTT_BROKER_ADDRESS`)</p>
-<p>- Change the Wi-Fi credentials to your local settings in *configs/wifi_config.h*</p>
-<p>- Compile and flash to your board</p>
+
+* Download and install ModusToolbox(TM) here</p>
+* (optional) Add the github repository to ModusToolbox(TM)</p>
+* Create new application (choose your BSP and select Template Application "Secure Element Anycloud MQTT Client Demonstration")</p>
+* Copy your endpoint string to configs/mqtt_client.h (`MQTT_SNI_HOSTNAME` and `MQTT_BROKER_ADDRESS`)</p>
+* Change the Wi-Fi credentials to your local settings in *configs/wifi_config.h*</p>
+* Compile and flash to your board</p>
 </details>
 
 <details><summary><b>4 Subscribe to MQTT topic</b></summary>
