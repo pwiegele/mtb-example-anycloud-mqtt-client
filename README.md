@@ -125,7 +125,6 @@ Various CLI tools include a `-h` option that prints help information to the term
 ## Operation
    
 In order to connect your MQTT client to an MQTT broker (for example AWS IoT Core) you need to follow the 4 steps below.
-The example below is using AWS IoT Core.
    
 <details><summary><b>1 Get the certificate from board</b></summary>
 * Use the micro USB cable to connect the USB port if your board to your machine
@@ -140,6 +139,8 @@ The example below is using AWS IoT Core.
    
 * Inspect output in teraterm and copy and paste the PEM certificate string (copy text and right click)
   <details><summary><b>Example PEM certificate string</b></summary>
+  <p>
+     
   ```
   -----BEGIN CERTIFICATE-----
   MIIB9jCCAXygAwIBAgIEXgT+DjAKBggqhkjOPQQDAzByMQswCQYDVQQGEwJERTEh
@@ -155,6 +156,7 @@ The example below is using AWS IoT Core.
   aLqzM0OYE4ys7VEMmlhaiP0pCMY18VObNvo=
   -----END CERTIFICATE-----
   ```
+  </p> 
   </details>
    
 </details>
