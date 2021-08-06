@@ -181,16 +181,16 @@ In order to connect your MQTT client to an MQTT broker (for example AWS IoT Core
 * Create new application (choose your BSP and select Template Application "Secure Element Anycloud MQTT Client Demonstration")
 * Copy your endpoint string to configs/mqtt_client.h (`MQTT_SNI_HOSTNAME` and `MQTT_BROKER_ADDRESS`)
 * Change the Wi-Fi credentials to your local settings in *configs/wifi_config.h*
-* Make sure you open the Wi-Fi access point (matching the credentials you configured earlier)
-* Compile and flash to your board
+* Make sure you have a Wi-Fi access point running (matching the credentials you configured earlier)
+* Compile and flash your board
 </details>
 
 <details><summary><b>4 Subscribe to MQTT topic</b></summary>
    
 * Go back to your AWS account
-* Click on item Test on he left
+* Click on item `Test` on he left
 * Enter the String `ledstatus` and click on subscribe
-* Press the button USR_BTN on the top side of the board (close to the silver module)
+* Press the button `USR_BTN` on the top side of the board (close to the silver module)
 * You should see an incomming message in your AWS account
 </details>
    
