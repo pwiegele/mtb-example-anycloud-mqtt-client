@@ -139,7 +139,7 @@ The example below is using AWS IoT Core.
 * Press the RST microswitch on the board (top layer of the PCB close to the micro USB port)
    
 * Inspect output in teraterm and copy and paste the PEM certificate string (copy text and right click)
-  <details><summary><b>Example PEM certificate string</b></summary>
+<details><summary><b>Example PEM certificate string</b></summary>
 <p>
 ```
 -----BEGIN CERTIFICATE-----
@@ -157,7 +157,7 @@ aLqzM0OYE4ys7VEMmlhaiP0pCMY18VObNvo=
 -----END CERTIFICATE-----
 ```
 </p>
-  </details>
+</details>
    
 </details>
    
@@ -183,83 +183,6 @@ aLqzM0OYE4ys7VEMmlhaiP0pCMY18VObNvo=
 - foobar
 </details>
    
-4. Connect the board to your PC using the provided USB cable through the KitProg3 USB connector.
-
-2. Modify the user configuration files in the *configs* directory as follows:
-
-      1. **Wi-Fi Configuration:** Set the Wi-Fi credentials in *configs/wifi_config.h*: Modify the macros `WIFI_SSID`, `WIFI_PASSWORD`, and `WIFI_SECURITY` to match with that of the Wi-Fi network that you want to connect.
-
-      2. **MQTT Configuration:** Set up the MQTT Client and configure the credentials in *configs/mqtt_client_config.h*. Some of the important configuration macros are as follows:
-
-         - `MQTT_BROKER_ADDRESS`: Hostname of the MQTT Broker
-
-         - `MQTT_PORT`: Port number to be used for the MQTT connection. As specified by IANA (Internet Assigned Numbers Authority), port numbers assigned for MQTT protocol are *1883* for non-secure connections and *8883* for secure connections. However, MQTT Brokers may use other ports. Configure this macro as specified by the MQTT Broker.
-
-         - `MQTT_SECURE_CONNECTION`: Set this macro to `1` if a secure (TLS) connection to the MQTT Broker is  required to be established; else `0`.
-
-         - `MQTT_USERNAME` and `MQTT_PASSWORD`: User name and password for client authentication and authorization, if required by the MQTT Broker. However, note that this information is generally not encrypted and the password is sent in plain text. Therefore, this is not a recommended method of client authentication.
-
-         - `CLIENT_CERTIFICATE` and `CLIENT_PRIVATE_KEY`: Certificate and private key of the MQTT Client, used for client authentication. Note that these macros are applicable only when `MQTT_SECURE_CONNECTION` is set to `1`.
-
-         - `ROOT_CA_CERTIFICATE`: Root CA certificate of the MQTT Broker
-
-         See [Setting up the MQTT Broker](#setting-up-the-mqtt-broker) to learn how to configure these macros for AWS IoT and Mosquitto MQTT Brokers.
-
-         For a full list of configuration macros used in this code example, see [Wi-Fi and MQTT configuration macros](#wi-fi-and-mqtt-configuration-macros).
-
-      3. Other configuration files: You can optionally modify the configuration macros in the following files according to your application:
-         - *configs/core_mqtt_config.h* used by the [MQTT library](https://github.com/cypresssemiconductorco/mqtt)
-
-         - *configs/FreeRTOSConfig.h* used by the [FreeRTOS library](https://github.com/cypresssemiconductorco/freertos)
-
-3. Open a terminal program and select the KitProg3 COM port. Set the serial port parameters to 8N1 and 115200 baud.
-
-4. Program the board using one of the following:
-
-   <details><summary><b>Using Eclipse IDE for ModusToolbox</b></summary>
-
-      1. Select the application project in the Project Explorer.
-
-      2. In the **Quick Panel**, scroll down, and click **\<Application Name> Program (KitProg3_MiniProg4)**.
-      </details>
-
-   <details><summary><b>Using CLI</b></summary>
-
-     From the terminal, execute the `make program` command to build and program the application using the default toolchain to the default target. You can specify a target and toolchain manually:
-      ```
-      make program TARGET=<BSP> TOOLCHAIN=<toolchain>
-      ```
-
-      Example:
-      ```
-      make program TARGET=CY8CKIT-062S2-43012 TOOLCHAIN=GCC_ARM
-      ```
-   </details>
-
-   After programming, the application starts automatically. Observe the messages on the UART terminal, and wait for the device to make all the required connections.
-
-   **Figure 1. Application initialization status**
-
-   ![](images/application_initialization.png)
-
-5. Once the initialization is complete, confirm that the message *"Press the user button (SW2) to publish "TURN ON"/"TURN OFF" on the topic 'ledstatus'..."* is printed on the UART terminal. This message may vary depending on the MQTT topic and publish messages that are configured in the *mqtt_client_config.h* file.
-
-6. Press the user button (SW2) on the kit to toggle the LED state.
-
-7. Confirm that the user LED state is toggled and the messages received on the subscribed topic are printed on the UART terminal.
-
-   **Figure 2. Publisher and Subscriber logs**
-
-   ![](images/publish_subscribe_messages.png)
-
-This example can be programmed on multiple kits (*Only when `GENERATE_UNIQUE_CLIENT_ID` is set to `1`*); the user LEDs on all the kits will synchronously toggle with button presses on any kit.
-
-Alternatively, the publish and subscribe functionalities of the MQTT Client can be individually verified if the MQTT Broker supports a Test MQTT Client like the AWS IoT.
-
-- *To verify the subscribe functionality*: Using the Test MQTT Client, publish messages such as "TURN ON" and "TURN OFF" on the topic specified by the `MQTT_PUB_TOPIC` macro in *mqtt_client_config.h* to control the LED state on the kit.
-
-- *To verify the publish functionality*: From the Test MQTT Client, subscribe to the MQTT topic specified by the `MQTT_SUB_TOPIC` macro and confirm that the messages published by the kit (when the user button is pressed) are displayed on the Test MQTT Client's console.
-
 ## Debugging
 
 You can debug the example to step through the code. In the IDE, use the **\<Application Name> Debug (KitProg3_MiniProg4)** configuration in the **Quick Panel**. For more details, see the "Program and debug" section in the [Eclipse IDE for ModusToolbox User Guide](https://www.cypress.com/MTBEclipseIDEUserGuide).
