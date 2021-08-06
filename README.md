@@ -190,7 +190,7 @@ In order to connect your MQTT client to an MQTT broker (for example AWS IoT Core
 * Go back to your AWS account
 * Click on item `Test` on he left
 * Enter the String `ledstatus` and click on subscribe
-* Press the button `USR_BTN` on the top side of the board (close to the silver module)
+* Press the button user botton on the top side of the board
 * You should see an incomming message in your AWS account
 </details>
    
