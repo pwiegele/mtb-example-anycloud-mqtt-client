@@ -140,8 +140,9 @@ The example below is using AWS IoT Core.
    
 * Inspect output in teraterm and copy and paste the PEM certificate string (copy text and right click)
   <details><summary><b>Example PEM certificate string</b></summary>
-  ```
-   -----BEGIN CERTIFICATE-----
+<p>
+```
+-----BEGIN CERTIFICATE-----
 MIIB9jCCAXygAwIBAgIEXgT+DjAKBggqhkjOPQQDAzByMQswCQYDVQQGEwJERTEh
 MB8GA1UECgwYSW5maW5lb24gVGVjaG5vbG9naWVzIEFHMRMwEQYDVQQLDApPUFRJ
 R0EoVE0pMSswKQYDVQQDDCJJbmZpbmVvbiBPUFRJR0EoVE0pIFRydXN0IE0gQ0Eg
@@ -154,7 +155,8 @@ jgxJmTAKBggqhkjOPQQDAwNoADBlAjEA0jVk4QiWEyy1/rKM1hZZOrl97wDDXXpp
 AgCQur1rUvgSp4umX0T4LT3EV1JvvUuCAjA86yrxxKrYft/+eqELm3vo7Pd6Jaf/
 aLqzM0OYE4ys7VEMmlhaiP0pCMY18VObNvo=
 -----END CERTIFICATE-----
-  ```
+```
+</p>
   </details>
    
 </details>
