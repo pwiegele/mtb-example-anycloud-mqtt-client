@@ -178,7 +178,7 @@ In order to connect your MQTT client to an MQTT broker (for example AWS IoT Core
 
 * Download and install ModusToolbox&trade; here
 * (optional) Add the github repository to ModusToolbox&trade;
-* Create new application (choose your BSP and select Template Application "Secure Element Anycloud MQTT Client Demonstration")
+* Create new application (choose your BSP (CYSBSYSKIT-DEV-01) and select Template Application "Secure Element Anycloud MQTT Client Demonstration")
 * Copy your endpoint string to configs/mqtt_client.h (`MQTT_SNI_HOSTNAME` and `MQTT_BROKER_ADDRESS`)
 * Change the Wi-Fi credentials to your local settings in *configs/wifi_config.h*
 * Make sure you have a Wi-Fi access point running (matching the credentials you configured earlier)
